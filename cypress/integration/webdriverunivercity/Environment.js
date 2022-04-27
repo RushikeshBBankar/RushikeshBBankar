@@ -1,0 +1,23 @@
+/// <reference types="Cypress" />
+
+
+describe("test Contact us from via WebdriverUni",()=>{
+
+    beforeEach(() => {
+        cy.visit('https://webdriveruniversity.com/Contact-Us/contactus.html')
+    
+    })
+    before(function(){
+        cy.fixture('example').then(function(data){
+            // this.data = data;
+            //if some time its command not use so we use onother command
+            globalThis.data = data;
+        })
+    })
+    //pass Test with all cridential
+    it("Should be able to submit a succesful submition via contact us from",()=>{
+        
+      cy.WebdriverUni_ContactForm_Submition(Cypress.env("First_Name"
+        ), data.last_name, data.email, "This is My basic information", 'h1', 'Thank You for your Message!')
+    }) 
+})
