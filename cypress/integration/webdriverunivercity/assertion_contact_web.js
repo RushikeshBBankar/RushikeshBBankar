@@ -2,7 +2,7 @@
 
 describe("test Contact us from via WebdriverUni",()=>{
     //pass Test with all cridential
-    it("Should be able to submit a succesful submition via contact us from",()=>{
+    it.only("Should be able to submit a succesful submition via contact us from",()=>{
         cy.visit('https://webdriveruniversity.com/Contact-Us/contactus.html')
         cy.get('[name="first_name"]').type('Tom ')
         cy.get('[name="last_name"]').type('Cruse')

@@ -8,7 +8,7 @@ class Contact_Us_PO {
         cy.get('[name="email"]').type(email)
         cy.get('textarea.feedback-input').type(comment)
         cy.get('[type="submit"]').click()
-        cy.get($selector).contains(textLocator),{timeout : 60000}
+        cy.get($selector).contains(textLocator).should('be.visible'),{timeout : 60000}
         // this time out setting is for perticular this step.
 
     }

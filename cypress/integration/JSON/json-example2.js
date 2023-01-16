@@ -1,16 +1,15 @@
 /// <reference types="Cypress" />
 
-describe("JSON Object",()=>{
+describe("JSON Object", () => {
 
-    it("Json Object Example",()=>{
-     
+    it("Json Object Example", () => {
+
         const users = {
             "FirstName": "Roshit",
             "LastName": "Sharma",
             "Age": "30",
-            
             // Student is a array
-            "Student":[
+            "Student": [
                 //array index 0
                 {
                     "FirstName": "Aishwarya",
@@ -21,17 +20,15 @@ describe("JSON Object",()=>{
                     "FirstName": "Mandakini",
                     "LastName": "Londhe",
                 }
-
             ]
-
         }
-
         cy.log(users.LastName)
         cy.log(users.FirstName)
         cy.log(users.Age)
+        cy.log(users.Student[0].FirstName)
+        cy.log(users.Student[0].LastName)
         cy.log(users.Student[1].FirstName)
         cy.log(users.Student[1].LastName)
-        
     })
 
 })
