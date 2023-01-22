@@ -1,4 +1,3 @@
-
 Cypress.Commands.add("navigateTo_WebdriverUni_homepage",() =>{
     cy.visit("/")
 })
@@ -9,6 +8,13 @@ Cypress.Commands.add("navigateTo_WebdriverUni_Contact_Us_page",() =>{
     cy.visit("/" +"/Contact-Us/contactus.html")
 })
 
+Cypress.Commands.add("AutomationStore",()=>{
+    cy.visit('https://automationteststore.com/')
+})
+
+Cypress.Commands.add('HairCare',()=>{
+    cy.get("a[href*='product/category&path=']").contains("Hair Care").click()
+})
 // command for select product 
 Cypress.Commands.add("selectProduct",productName =>{
     cy.get('.fixed_wrapper .prdocutname').each(($el, index, $list) => {
