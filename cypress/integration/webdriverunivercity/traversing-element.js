@@ -1,6 +1,3 @@
-
-/// <reference types="Cypress" />
-
 describe("Multi Browser Test",()=>{
 beforeEach(() => {
     cy.visit('https://webdriveruniversity.com/')
