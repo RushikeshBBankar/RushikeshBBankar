@@ -1,21 +1,8 @@
+import { product } from "../../common/run-check-product"
 describe("Iterate over Element", () => {
-
     beforeEach(() => {
-        cy.visit('https://automationteststore.com/')
-        cy.get("a[href*='product/category&path=']").contains("Hair Care").click()
-
+        cy.AutomationStore()
+        cy.HairCare()
     })
-
-    it("Add A  cyrls specific Product to basket", () => {
-        cy.selectProduct('Curls to straight Shampoo')
-    })
-    it("Add A seaweed specific Product to basket", () => {
-        
-        cy.selectProduct('Seaweed Conditioner')
-    })
-    it("Add A eau specific Product to basket", () => {
-        
-        cy.selectProduct('Eau Parfumee au The Vert Shampoo')
-    })
-
+    product()
 })
