@@ -2,8 +2,6 @@
 import Contact_Us_PO from "../../support/pageObjectModel/webDrivUniPage/ContactPage_PO";
 import HomePage_PO from "../../support/pageObjectModel/webDrivUniPage/Homepage_PO"
 
-/// <reference types="Cypress" />
-
 describe("WebDriveUni Page Object Model ",()=>{
   Cypress.config('defaultCommandTimeout', 20000)
     
